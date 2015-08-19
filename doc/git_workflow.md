@@ -22,4 +22,11 @@ Möchte man in einem neuen `Branch` weiter arbeiten, muss zuerst einer angelegt 
 git branch "neuerBranch"
 git checkout "neuerBranch"
 ```
-
+Alternativ kann man auch einen `leeren` Branch anlegen.
+```bash
+git checkout --orphan "leererBranch"
+git rm -rf .
+touch "neue_Datei_im_leeren_branch"
+git add -A
+git commit -a -m "Leere Datei angelegt."
+```
