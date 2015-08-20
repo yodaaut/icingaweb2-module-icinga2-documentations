@@ -1,4 +1,4 @@
-Module: monitorer
+Module: monitor
 Version: 0.0.1
 Description: Diverse Dokumentationen um Thema Monitoring-Server
  Derzeit verfügbar: `Postfix`, `Git Workflow`
