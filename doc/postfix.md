@@ -22,18 +22,39 @@ sudo -E apt-get install postfix
 ### Installationsparameter
 Bevor die Installation beginnt muss man eine der `E-Mail-Server-Konfigurationen`
 auswählen.
-[] Keine Konfiguration
+[x] Keine Konfiguration
 [] Internet-Site
 [] Internet mit Smwarthost
-[x] Satellitensystem
+[] Satellitensystem
 [] Nur lokal
-> Durch Auswahl des Satellitensystem versendet Postfix E-Mails mittels externen
-> SMTP
-
-Als nächstes wird die FQDN für E-Mail-Adressen erfragt.
-> Im Beispiel foo@bar.com wäre der FQDN
-> bar.com
-
-Als nächstes wird der `SMTP-Relay-Server` angegeben.
 
 ## Konfiguration
+### /etc/mailname
+Sicherstellen, dass die Datei `/etc/mailname` den richtigen Eintrag hat.
+Hier wird der hintere Teil nach dem `@` Zeichen festgelegt.
+
+> Als Beispiel foo.bar
+> Eine Mail-Adresse würde dadurch dann "email@foo.bar" lauten.
+---
+### /etc/postfix/main.cf
+Hat man bei der Installation `Keine Konfiguration` ausgewählt so kann man sich
+die Grundkonfiguration aus `/usr/share/postfix/` kopieren.
+```bash
+cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf
+```
+
+## Tools
+Für die Verwaltung von Postfix.
+
+### Installation
+Management der Queue.
+```bash
+sudo -E apt-get install pmailq
+```
+Dadurch installiert sich `postqueue` mit dem man sich eine Liste der Mails, die
+noch nicht weggeschickt wurden, anzeigen lassen und diese Mails erneut
+versenden kann.
+```bash
+sudo postqueue -p
+sudo postqueue -f
+```
