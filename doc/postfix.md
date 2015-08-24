@@ -43,3 +43,18 @@ die Grundkonfiguration aus `/usr/share/postfix/` kopieren.
 cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf
 ```
 
+## Tools
+Für die Verwaltung von Postfix.
+
+### Installation
+Management der Queue.
+```bash
+sudo -E apt-get install pmailq
+```
+Dadurch installiert sich `postqueue` mit dem man sich eine Liste der Mails, die
+noch nicht weggeschickt wurden, anzeigen lassen und diese Mails erneut
+versenden kann.
+```bash
+sudo postqueue -p
+sudo postqueue -f
+```
