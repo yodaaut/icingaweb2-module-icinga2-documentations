@@ -58,3 +58,7 @@ versenden kann.
 sudo postqueue -p
 sudo postqueue -f
 ```
+E-mail aus der Queue löschen:
+```bash
+sudo postsuper -d QUEUEID
+```
