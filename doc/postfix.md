@@ -16,7 +16,7 @@ sudo -E apt-get upgrade
 sudo -E apt-get install postfix
 ```
 > `sudo -E` wird deshalb verwendet, damit die `Environment-Variables`
-> (Umgebungsvariablen) übernommen werden.
+> (Umgebungsvariablen) übernommen werden.  
 > Das macht zb. Sinn bei `Proxy Konfigurationen`
 
 ### Installationsparameter
@@ -33,8 +33,9 @@ auswählen.
 Sicherstellen, dass die Datei `/etc/mailname` den richtigen Eintrag hat.
 Hier wird der hintere Teil nach dem `@` Zeichen festgelegt.
 
-> Als Beispiel foo.bar
+> Als Beispiel foo.bar  
 > Eine Mail-Adresse würde dadurch dann "email@foo.bar" lauten.
+
 ---
 ### /etc/postfix/main.cf
 Hat man bei der Installation `Keine Konfiguration` ausgewählt so kann man sich
