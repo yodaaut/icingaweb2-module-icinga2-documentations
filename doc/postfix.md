@@ -21,12 +21,12 @@ sudo -E apt-get install postfix
 
 ### Installationsparameter
 Bevor die Installation beginnt muss man eine der `E-Mail-Server-Konfigurationen`
-auswählen.
-[x] Keine Konfiguration
-[] Internet-Site
-[] Internet mit Smwarthost
-[] Satellitensystem
-[] Nur lokal
+auswählen.  
+- [x] Keine Konfiguration
+- [ ] Internet-Site
+- [ ] Internet mit Smwarthost
+- [ ] Satellitensystem
+- [ ] Nur lokal
 
 ## Konfiguration
 ### /etc/mailname
