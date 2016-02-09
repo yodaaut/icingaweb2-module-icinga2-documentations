@@ -30,3 +30,10 @@ touch "neue_Datei_im_leeren_branch"
 git add -A
 git commit -a -m "Leere Datei angelegt."
 ```
+
+Kontrollieren, ob es ein neues Update des git-Verzeichnis gibt und anschliessend durchführen.
+```bash
+git remote -v update
+git status -uno
+git pull
+```
