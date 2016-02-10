@@ -15,3 +15,19 @@ Aber nun zum Eigentlichen...
 ```bash
 pg_lsclusters
 ```
+
+### neuen Cluster anlegen
+```bash
+pg_createcluster -d /pfad/zur/datenbank/lokation VERSION NAME
+```
+
+Die Konfigurationsdateien befinden sich dann unter `/etc/postgresql/VERSION/NAME`
+
+### Cluster starten/stoppen/status
+```bash
+pg_ctlcluster VERSION NAME start
+pg_ctlcluster VERSION NAME stop
+pg_ctlcluster VERSION NAME restart
+pg_ctlcluster VERSION NAME reload
+pg_ctlcluster VERSION NAME status
+```
